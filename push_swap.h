@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:56:29 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/03 17:05:21 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/10 15:13:38 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,50 @@
 
 # include <stdbool.h>
 # include <stdio.h>
-# include "libft/libft.h"
+# include "libft_push_swap/libft.h"
+# include "limits.h"
 
-# define VALIDE_SYMBOLE "0123456789"
+# define VALIDE_SYMBOLE "-0123456789"
+
+enum e_stack {
+	A,
+	B,
+};
 
 typedef struct s_data
 {
 	int		lenght_array;
 	char	array;
-	char	**tab_stack;
+	long	**tab_stack;
 	bool	parsing;
-	
+	char	**arg;
+	int		nb_arg;
+	bool	sorted;
 }	t_data;
 
-void	quit(t_data *data);
-bool	parsing(t_data *data, int argc, char **argv);
+void	quit();
+void	a_sorted();
+void	valid_check(t_data *data, int argc, char **argv);
+void	check_if_sorted(t_data *data, int argc);
+void	check_doublon(t_data *data, int argc);
 int		main(int argc, char **argv);
+void	full_stack_a(t_data *data, char **argv, int argc);
+char	**split_argv(char **argv, t_data *data);
+void	call_parsing(t_data *data, int argc, char **argv);
+void	check_minus(t_data *data, int argc, char **argv);
+void	check_max_min(t_data *data, int argc);
+void	quit_free(t_data *data);
+void	ft_free_long_tab_P_S(long **tab);
+void	swap_a(t_data *data);
+void	swap_b(t_data *data);
+void	swap_a_swap_b(t_data *data);
+void	push_a(t_data *data);
+void	push_b(t_data *data);
+void	rotate_a(t_data *data);
+void	rotate_b(t_data *data);
+void	rotate_a_rotate_b(t_data *data);
+void	reverse_rotate_a(t_data *data);
+void	reverse_rotate_b(t_data *data);
+void	reverse_rotate_a_reverse_rotate_b(t_data *data);
 
 #endif

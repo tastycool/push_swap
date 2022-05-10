@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   quit.c                                             :+:      :+:    :+:   */
+/*   call_rules3.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 13:58:10 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/10 14:10:04 by tberube-         ###   ########.fr       */
+/*   Created: 2022/05/10 14:15:55 by tberube-          #+#    #+#             */
+/*   Updated: 2022/05/10 14:22:07 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	quit()
+void	reverse_rotate_a_reverse_rotate_b(t_data *data)
 {
-	dprintf(2, "Error\n");
-	exit(0);
+	dprintf(1, "rrr\n");
 }
-
-void	a_sorted(t_data *data)
-{
-	printf("sorted mais a enlever");
-	ft_free_long_tab(data->tab_stack);
-	exit(0);
-}
-
-void	quit_free(t_data *data)
-{
-	dprintf(2, "Error\n");
-	ft_free_long_tab(data->tab_stack);
-	exit(0);
-}
-

@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   quit.c                                             :+:      :+:    :+:   */
+/*   ft_free_long_tab.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 13:58:10 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/10 14:10:04 by tberube-         ###   ########.fr       */
+/*   Created: 2022/05/10 10:33:51 by tberube-          #+#    #+#             */
+/*   Updated: 2022/05/10 13:29:07 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
+#include <stdio.h>
 
-void	quit()
+void	ft_free_long_tab(long **tab)
 {
-	dprintf(2, "Error\n");
-	exit(0);
-}
+	int	y;
 
-void	a_sorted(t_data *data)
-{
-	printf("sorted mais a enlever");
-	ft_free_long_tab(data->tab_stack);
-	exit(0);
+	y = 0;
+	free(tab[0]);
+	free(tab[1]);
+	free(tab);
 }
-
-void	quit_free(t_data *data)
-{
-	dprintf(2, "Error\n");
-	ft_free_long_tab(data->tab_stack);
-	exit(0);
-}
-

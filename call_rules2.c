@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   quit.c                                             :+:      :+:    :+:   */
+/*   call_rules2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 13:58:10 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/10 14:10:04 by tberube-         ###   ########.fr       */
+/*   Created: 2022/05/10 14:15:16 by tberube-          #+#    #+#             */
+/*   Updated: 2022/05/10 14:31:55 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	quit()
+void	rotate_a(t_data *data)
 {
-	dprintf(2, "Error\n");
-	exit(0);
+	dprintf(1, "ra\n");
 }
 
-void	a_sorted(t_data *data)
+void	rotate_b(t_data *data)
 {
-	printf("sorted mais a enlever");
-	ft_free_long_tab(data->tab_stack);
-	exit(0);
+	dprintf(1, "rb\n");
 }
 
-void	quit_free(t_data *data)
+void	rotate_a_rotate_b(t_data *data)
 {
-	dprintf(2, "Error\n");
-	ft_free_long_tab(data->tab_stack);
-	exit(0);
+	dprintf(1, "rr\n");
 }
 
+void	reverse_rotate_a(t_data *data)
+{
+	dprintf(1, "rra\n");
+}
+
+void	reverse_rotate_b(t_data *data)
+{
+	dprintf(1, "rrb\n");
+}

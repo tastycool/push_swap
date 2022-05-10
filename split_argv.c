@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   quit.c                                             :+:      :+:    :+:   */
+/*   split_argv.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 13:58:10 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/10 14:10:04 by tberube-         ###   ########.fr       */
+/*   Created: 2022/05/05 10:36:31 by tberube-          #+#    #+#             */
+/*   Updated: 2022/05/10 10:50:36 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	quit()
+char	**split_argv(char **argv, t_data *data)
 {
-	dprintf(2, "Error\n");
-	exit(0);
+	data->nb_arg = 0;
+	argv = ft_split(argv[0], ' ');
+	while (argv[data->nb_arg] != NULL)
+		data->nb_arg++;
+	if (argv[data->nb_arg] == NULL)
+		exit(0);
+	return (argv);
 }
-
-void	a_sorted(t_data *data)
-{
-	printf("sorted mais a enlever");
-	ft_free_long_tab(data->tab_stack);
-	exit(0);
-}
-
-void	quit_free(t_data *data)
-{
-	dprintf(2, "Error\n");
-	ft_free_long_tab(data->tab_stack);
-	exit(0);
-}
-

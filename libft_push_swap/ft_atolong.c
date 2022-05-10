@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   quit.c                                             :+:      :+:    :+:   */
+/*   ft_atolong.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 13:58:10 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/10 14:10:04 by tberube-         ###   ########.fr       */
+/*   Created: 2022/05/09 15:15:00 by tberube-          #+#    #+#             */
+/*   Updated: 2022/05/09 15:53:29 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	quit()
+long	ft_atolong(const char *str)
 {
-	dprintf(2, "Error\n");
-	exit(0);
-}
+	long		retour;
+	int			i;
+	int			negatif;
 
-void	a_sorted(t_data *data)
-{
-	printf("sorted mais a enlever");
-	ft_free_long_tab(data->tab_stack);
-	exit(0);
-}
+	negatif = 1;
+	i = 0;
+	retour = 0;
 
-void	quit_free(t_data *data)
-{
-	dprintf(2, "Error\n");
-	ft_free_long_tab(data->tab_stack);
-	exit(0);
+	if (str[0] == '-')
+	{
+		negatif = -1;
+		i++;
+	}
+	while (str[i])
+	{
+		retour = (str[i] - '0') + (retour * 10);
+		i++;
+	}
+	return (retour * negatif);
 }
-
