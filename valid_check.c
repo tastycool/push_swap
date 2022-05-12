@@ -6,20 +6,20 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:06:23 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/10 15:13:58 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/12 13:46:43 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <unistd.h>
 
-void	check_minus(t_data *data, int argc, char **argv)
+void	check_minus(t_data *data, char **argv)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (i < argc)
+	while (i < data->nb_arg)
 	{
 		j = 0;
 		if (argv[i][j] == '-')
@@ -35,15 +35,15 @@ void	check_minus(t_data *data, int argc, char **argv)
 	}
 }
 
-void	valid_check(t_data *data, int argc, char **argv)
+void	valid_check(t_data *data, char **argv, int argc)
 {
 	int	i;
 	int	j;
 	
 	i = 0;
-	if (data->nb_arg != 0)
-		argc = data->nb_arg;
-	while (i < argc)
+	if (data->nb_arg == 0)
+		data->nb_arg = argc;
+	while (i < data->nb_arg)
 	{
 		j = 0;
 		while (argv[i][j] != '\0')
@@ -58,10 +58,11 @@ void	valid_check(t_data *data, int argc, char **argv)
 	
 void	call_parsing(t_data *data, int argc, char **argv)
 {
-	valid_check(data, argc, argv);
-	check_minus(data, argc, argv);
-	full_stack_a(data, argv, argc);
-	check_doublon(data, argc);
-	check_if_sorted(data, argc);
-	check_max_min(data, argc);
+	valid_check(data, argv, argc);
+	check_minus(data, argv);
+	full_stack_a(data, argv);
+	check_doublon(data);
+	check_if_sorted(data);
+	check_max_min(data);
+	test(data);
 }

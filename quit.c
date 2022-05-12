@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 13:58:10 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/10 14:10:04 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/12 09:26:21 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	quit()
 
 void	a_sorted(t_data *data)
 {
-	printf("sorted mais a enlever");
+	printf("sorted mais a enlever\n");
 	ft_free_long_tab(data->tab_stack);
 	exit(0);
 }
