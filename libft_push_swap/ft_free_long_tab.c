@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 10:33:51 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/10 13:29:07 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/12 19:53:26 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 void	ft_free_long_tab(long **tab)
 {
-	int	y;
-
-	y = 0;
 	free(tab[0]);
 	free(tab[1]);
 	free(tab);

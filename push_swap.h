@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:56:29 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/12 13:09:53 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/12 19:59:32 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,13 @@ typedef struct s_data
 
 void	quit();
 void	a_sorted(t_data *data);
-void	valid_check(t_data *data, char **argv, int argc);
+void	valid_check(t_data *data, char **argv);
 void	check_if_sorted(t_data *data);
 void	check_doublon(t_data *data);
 int		main(int argc, char **argv);
 void	full_stack_a(t_data *data, char **argv);
 char	**split_argv(char **argv, t_data *data);
-void	call_parsing(t_data *data, int argc, char **argv);
+void	call_parsing(t_data *data, char **argv);
 void	check_minus(t_data *data, char **argv);
 void	check_max_min(t_data *data);
 void	quit_free(t_data *data);

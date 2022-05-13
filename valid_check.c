@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:06:23 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/12 13:46:43 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/12 19:59:23 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,12 @@ void	check_minus(t_data *data, char **argv)
 	}
 }
 
-void	valid_check(t_data *data, char **argv, int argc)
+void	valid_check(t_data *data, char **argv)
 {
 	int	i;
 	int	j;
 	
 	i = 0;
-	if (data->nb_arg == 0)
-		data->nb_arg = argc;
 	while (i < data->nb_arg)
 	{
 		j = 0;
@@ -56,9 +54,9 @@ void	valid_check(t_data *data, char **argv, int argc)
 	}
 }
 	
-void	call_parsing(t_data *data, int argc, char **argv)
+void	call_parsing(t_data *data, char **argv)
 {
-	valid_check(data, argv, argc);
+	valid_check(data, argv);
 	check_minus(data, argv);
 	full_stack_a(data, argv);
 	check_doublon(data);
