@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   call_rules1.c                                      :+:      :+:    :+:   */
+/*   double_call.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 09:56:23 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/13 09:49:50 by tberube-         ###   ########.fr       */
+/*   Created: 2022/05/13 09:47:57 by tberube-          #+#    #+#             */
+/*   Updated: 2022/05/13 10:01:21 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap_a(t_data *data)
+void	swaping_A(t_data *data)
 {
 	int	tmp;
 	
@@ -21,10 +21,9 @@ void	swap_a(t_data *data)
 	tmp = data->tab_stack[A][data->nb_stack_A];
 	data->tab_stack[A][data->nb_stack_A] = data->tab_stack[A][data->nb_stack_A - 1];
 	data->tab_stack[A][data->nb_stack_A - 1] = tmp;
-	dprintf(1, "sa\n");
 }
 
-void	swap_b(t_data *data)
+void	swaping_B(t_data *data)
 {
 	int	tmp;
 
@@ -33,32 +32,38 @@ void	swap_b(t_data *data)
 	tmp = data->tab_stack[B][data->nb_stack_B];
 	data->tab_stack[B][data->nb_stack_B] = data->tab_stack[B][data->nb_stack_B - 1];
 	data->tab_stack[B][data->nb_stack_B] = tmp;
-	dprintf(1, "sb\n");	
 }
 
-void	swap_a_swap_b(t_data *data)
+void	rotating_A(t_data *data)
 {
-	swaping_A(data);
-	swaping_B(data);
-	dprintf(1, "ss\n");
-}
-
-void	push_a(t_data *data)
-{
-	if (data->nb_stack_B < 1)
+	int	i;
+	int tmp;
+	
+	if (data->nb_stack_A < 2)
 		return ;
-	data->tab_stack[A][data->nb_stack_A + 1] = data->tab_stack[B][data->nb_stack_B];
-	data->nb_stack_A++;
-	data->nb_stack_B--;
-	dprintf(1, "pa\n");
+	i = data->nb_stack_A;
+	tmp = data->tab_stack[A][i];
+	while (i >= 0)
+		{
+			i--;
+			data->tab_stack[A][i + 1] = data->tab_stack[A][i];
+		}
+	data->tab_stack[A][0] = tmp;
 }
 
-void	push_b(t_data *data)
+void	rotating_B(t_data *data)
 {
-	if (data->nb_stack_A < 1)
+	int	i;
+	int tmp;
+	
+	if (data->nb_stack_B < 2)
 		return ;
-	data->tab_stack[B][data->nb_stack_B] = data->tab_stack[A][data->nb_stack_A];
-	data->nb_stack_A--;
-	data->nb_stack_B++;
-	dprintf(1, "pb\n");
+	i = data->nb_stack_B;
+	tmp = data->tab_stack[B][i];
+	while (i >= 0)
+		{
+			i--;
+			data->tab_stack[B][i + 1] = data->tab_stack[B][i];
+		}
+	data->tab_stack[B][0] = tmp;
 }

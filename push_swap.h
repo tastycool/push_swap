@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:56:29 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/12 19:59:32 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/13 10:10:55 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,11 @@ void	reverse_rotate_a(t_data *data);
 void	reverse_rotate_b(t_data *data);
 void	reverse_rotate_a_reverse_rotate_b(t_data *data);
 void	test(t_data *data);
+void	swaping_A(t_data *data);
+void	swaping_B(t_data *data);
+void	rotating_A(t_data *data);
+void	rotating_B(t_data *data);
+void	rrra(t_data *data);
+void	rrrb(t_data *data);
 
 #endif
