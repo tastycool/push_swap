@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:56:29 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/13 10:10:55 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/17 17:00:18 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,10 @@ typedef struct s_data
 	bool	sorted;
 	int		nb_stack_A;
 	int		nb_stack_B;
+	int		*index;
+	int		index_min;
+	int		incre_int;
+	int		next_min;
 }	t_data;
 
 void	quit();
@@ -69,5 +73,11 @@ void	rotating_A(t_data *data);
 void	rotating_B(t_data *data);
 void	rrra(t_data *data);
 void	rrrb(t_data *data);
+void	find_min(t_data *data);
+void	call_algo(t_data *data);
+void	find_next(t_data *data);
+void	sort_index_stack_A(t_data *data);
+void	indexisation(t_data *data);
+void	algo_3(t_data *data);
 
 #endif

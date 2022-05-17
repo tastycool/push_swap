@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 11:41:44 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/12 09:56:42 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/16 10:39:26 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	check_if_sorted(t_data *data)
 	int	i;
 
 	i = data->nb_arg - 1;
-	while (data->tab_stack[A][i] < data->tab_stack[A][i - 1])
+	while (data->tab_stack[A][i] > data->tab_stack[A][i - 1])
 	{
 		i--;
 		if (i == 0)			
