@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 13:44:40 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/17 16:27:50 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/18 11:40:47 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	sort_index_stack_A(t_data *data)
 	i = 0;
 	while (data->tab_stack[A][i] != data->index[data->incre_int])
 		i++;
-	data->tab_stack[A][i] = data->incre_int;
+	data->tab_stack[A][i] = data->incre_int + 1;
 }
 
 void	find_next(t_data *data)
