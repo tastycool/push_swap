@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:56:29 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/17 17:00:18 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/19 11:45:49 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ typedef struct s_data
 	int		index_min;
 	int		incre_int;
 	int		next_min;
+	int		s_1_2;
 }	t_data;
 
 void	quit();
@@ -79,5 +80,10 @@ void	find_next(t_data *data);
 void	sort_index_stack_A(t_data *data);
 void	indexisation(t_data *data);
 void	algo_3(t_data *data);
+void	algo_3_suite(t_data *data);
+void	algo_5(t_data *data);
+void	search_1_2(t_data *data);
+void	algo_5_suite(t_data *data);
+void	suite_2_algo_5(t_data *data);
 
 #endif

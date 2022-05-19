@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 09:56:23 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/13 09:49:50 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/19 12:20:44 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	push_a(t_data *data)
 {
 	if (data->nb_stack_B < 1)
 		return ;
-	data->tab_stack[A][data->nb_stack_A + 1] = data->tab_stack[B][data->nb_stack_B];
+	data->tab_stack[A][data->nb_stack_A] = data->tab_stack[B][data->nb_stack_B];
 	data->nb_stack_A++;
 	data->nb_stack_B--;
 	dprintf(1, "pa\n");

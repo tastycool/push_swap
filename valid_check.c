@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:06:23 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/18 11:39:45 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/19 11:04:54 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,10 +85,13 @@ void	indexisation(t_data *data)
 		sort_index_stack_A(data);
 		data->incre_int++;
 	}
-	//call_algo(data);
+	call_algo(data);
 }
 
-// void	call_algo(t_data *data)
-// {
-// 	algo_3(data);	
-// }
+void	call_algo(t_data *data)
+{
+	if (data->nb_arg == 3)
+		algo_3(data);
+	if (data->nb_arg <= 5 && data->nb_arg > 3)
+		algo_5(data);
+}
