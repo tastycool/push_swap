@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:15:16 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/13 10:06:43 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/19 16:21:19 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	rotate_a(t_data *data)
 	if (data->nb_stack_A < 2)
 		return ;
 	i = data->nb_stack_A;
-	tmp = data->tab_stack[A][i];
-	while (i >= 0)
+	tmp = data->tab_stack[A][i - 1];
+	while (i > 0)
 		{
 			i--;
 			data->tab_stack[A][i + 1] = data->tab_stack[A][i];
@@ -38,8 +38,8 @@ void	rotate_b(t_data *data)
 	if (data->nb_stack_B < 2)
 		return ;
 	i = data->nb_stack_B;
-	tmp = data->tab_stack[B][i];
-	while (i >= 0)
+	tmp = data->tab_stack[B][i - 1];
+	while (i > 0)
 		{
 			i--;
 			data->tab_stack[B][i + 1] = data->tab_stack[B][i];
@@ -64,7 +64,7 @@ void	reverse_rotate_a(t_data *data)
 		return ;
 	i = 0;
 	tmp = data->tab_stack[A][i];
-	while (i < data->nb_stack_A)
+	while (i + 1 < data->nb_stack_A)
 		{
 			i++;
 			data->tab_stack[A][i - 1] = data->tab_stack[A][i];
@@ -82,7 +82,7 @@ void	reverse_rotate_b(t_data *data)
 		return ;
 	i = 0;
 	tmp = data->tab_stack[B][i];
-	while (i < data->nb_stack_B)
+	while (i + 1 < data->nb_stack_B)
 		{
 			i++;
 			data->tab_stack[B][i - 1] = data->tab_stack[B][i];

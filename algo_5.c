@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 11:39:07 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/19 11:50:47 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/19 16:16:52 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	algo_5(t_data *data)
 	}
 	if (data->s_1_2 == 1)
 	{
-		reverse_rotate_a(data);
-		reverse_rotate_a(data);
+		rotate_a(data);
+		rotate_a(data);
 		push_b(data);
 	}
 	if (data->s_1_2 == 2)
@@ -68,9 +68,9 @@ void	algo_5_suite(t_data *data)
 
 void	suite_2_algo_5(t_data *data)
 {
-	algo_3(data);
 	if (data->tab_stack[B][0] > data->tab_stack[B][1])
 		swap_b(data);
+	algo_3(data);
 	push_a(data);
 	push_a(data);
 }
