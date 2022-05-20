@@ -5,6 +5,16 @@
 		"algorithm": "c",
 		"bitset": "c",
 		"chrono": "c",
-		"unordered_map": "c"
+		"unordered_map": "c",
+		"variant": "c",
+		"array": "c",
+		"string": "c",
+		"string_view": "c",
+		"vector": "c",
+		"iterator": "c",
+		"cstdio": "c",
+		"__config": "c",
+		"__tuple": "c",
+		"ios": "c"
 	}
 }

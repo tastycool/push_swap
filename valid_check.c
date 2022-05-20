@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:06:23 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/19 11:04:54 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/20 15:49:50 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ void	call_parsing(t_data *data, char **argv)
 void	indexisation(t_data *data)
 {
 	data->incre_int = 0;
-	data->index = ft_calloc(data->nb_arg, sizeof(int));
 	data->index_min = data->tab_stack[A][0];
 	find_min(data);
 	data->index[data->incre_int] = data->index_min;
@@ -94,4 +93,6 @@ void	call_algo(t_data *data)
 		algo_3(data);
 	if (data->nb_arg <= 5 && data->nb_arg > 3)
 		algo_5(data);
+	if (data->nb_arg > 5)
+		gros_algo(data);
 }

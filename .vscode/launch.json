@@ -4,13 +4,14 @@
 	// Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
 	"configurations": [
+
 		{
 			"type": "lldb",
 			"request": "launch",
 			"name": "Debug",
 			"program": "${workspaceFolder}/push_swap",
 			//"args": ["3 4 5 6 8 7"],
-			"args": ["4 2 5 1 3"],
+			"args": ["78 70 30 83 61 5 90 16 60 92 52 6 98 97 79 12 95 64 29 91 1 37 25 63 74 89 11 69 32 41 82 57 77 33 21 4 9 3 47 45 49 66 35 36 20 17 44 58 28 86 73 99 48 22 81 50 7 96 23 93 34 72 13 80 53 62 76 94 14 38 40 31 43 88 42 39 54 18 59 26 27 51 8 84 15 10 2 71 55 19 67 56 65 46 68 100 85 75 24 87"],
 			"cwd": "${workspaceFolder}"
 		}
 	]

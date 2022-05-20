@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 11:39:07 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/19 16:16:52 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/20 13:28:57 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	algo_5(t_data *data)
 {
+
+	// trouve les 2 plus petit du stack A et push dans B
+	// Call sort 3 sur Stack A
+	// Push B dans A
+	// Si ton stack est pas sort tu swap A
 	search_1_2(data);
 	if (data->s_1_2 == 4)
 		push_b(data);
@@ -24,8 +29,8 @@ void	algo_5(t_data *data)
 	}
 	if (data->s_1_2 == 1)
 	{
-		rotate_a(data);
-		rotate_a(data);
+		reverse_rotate_a(data);
+		reverse_rotate_a(data);
 		push_b(data);
 	}
 	if (data->s_1_2 == 2)
