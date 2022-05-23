@@ -6,7 +6,7 @@
 #    By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 16:38:24 by tberube-          #+#    #+#              #
-#    Updated: 2022/05/20 15:27:03 by tberube-         ###   ########.fr        #
+#    Updated: 2022/05/21 09:35:08 by tberube-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ NAME = push_swap
 SRCS = 	main.c parsing.c quit.c full_stack_a.c split_argv.c valid_check.c \
 		call_rules1.c call_rules2.c call_rules3.c ft_free_long_tab_P_S.c \
 		double_call.c indexisation.c algo_3.c algo_5.c gros_algo.c \
+		search_bigger.c \
 
 LIBFT_PATH = libft_push_swap/
 

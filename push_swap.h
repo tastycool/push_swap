@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:56:29 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/20 17:16:33 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/21 11:04:15 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ typedef struct s_data
 	int		augment;
 	int		i;
 	int		j;
+	int		x;
+	int		max;
 }	t_data;
 
 void	quit();
@@ -93,5 +95,10 @@ void 	print_stack(long* stack, int size);
 void	gros_algo(t_data *data);
 void	algo_6_499(t_data *data);
 void	algo_6_499_suite(t_data *data);
+void	search_bigger(t_data *data);
+void	pyramid_build(t_data *data);
+void	find_bigger(t_data *data);
+void	put_bigger_on_top_rotate(t_data *data);
+void	put_bigger_on_top_r_rotate(t_data *data);
 
 #endif

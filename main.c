@@ -6,24 +6,24 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 09:13:43 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/20 15:51:04 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/21 07:41:41 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// void print_stack(long* stack, int size)
-// {
-// 	int i;
+void print_stack(long* stack, int size)
+{
+	int i;
 
-// 	i = -1;
-// 	while (++i < size)
-// 	{
-// 		printf("stack[%d]: %ld\n", i, stack[i]);
-// 	}
+	i = -1;
+	while (++i < size)
+	{
+		printf("stack[%d]: %ld\n", i, stack[i]);
+	}
 	
-// 	printf("\n----------\n");
-// }
+	printf("\n----------\n");
+}
 
 int	main(int argc, char **argv)
 {
