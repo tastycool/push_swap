@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:56:29 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/24 13:39:21 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 14:07:27 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,6 @@ void	put_bigger_on_top_rotate(t_data *data);
 void	put_bigger_on_top_r_rotate(t_data *data);
 void	check_mediane(t_data *data);
 void	stackA_toB(t_data *data);
+void	ft_free(t_data *data);
 
 #endif
