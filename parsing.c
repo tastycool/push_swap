@@ -6,13 +6,13 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 11:41:44 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/24 15:40:28 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 16:11:52 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	check_max_min(t_data *data, char **argv, int argc)
+void	check_max_min(t_data *data, char **argv)
 {
 	int	i;
 
@@ -20,12 +20,12 @@ void	check_max_min(t_data *data, char **argv, int argc)
 	while (i < data->nb_arg)
 	{
 		if (data->index[i] > INT_MAX || data->index[i] < INT_MIN)
-			quit_free(data, argc, argv);
+			quit_free(data, argv);
 		i++;
 	}
 }
 
-void	check_if_sorted(t_data *data, char **argv, int argc)
+void	check_if_sorted(t_data *data, char **argv)
 {
 	int	i;
 
@@ -34,11 +34,11 @@ void	check_if_sorted(t_data *data, char **argv, int argc)
 	{
 		i--;
 		if (i == 0)
-			a_sorted(data, argv, argc);
+			a_sorted(data, argv);
 	}
 }
 
-void	check_doublon(t_data *data, char **argv, int argc)
+void	check_doublon(t_data *data, char **argv)
 {
 	int		avant;
 	int		apres;
@@ -54,7 +54,7 @@ void	check_doublon(t_data *data, char **argv, int argc)
 		{
 			apres = data->index[j];
 			if (avant == apres)
-				quit_free(data, argc, argv);
+				quit_free(data, argv);
 			else
 				j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 09:13:43 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/24 15:17:42 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 16:15:34 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,17 @@ int	main(int argc, char **argv)
 	++argv;
 	if (argc < 1)
 		exit(1);
+	data.verifier = 0;
 	if (ft_strchr(argv[0], ' '))
 		argv = split_argv(argv, &data);
 	if (data.nb_arg != 0 && argc >= 2)
-		quit(argv, argc);
+		quit(&data, argv);
 	if (data.nb_arg == 0)
 		data.nb_arg = argc;
 	data.tab_stack = ft_calloc(2, sizeof(long *));
 	data.tab_stack[A] = ft_calloc((data.nb_arg), sizeof(long));
 	data.tab_stack[B] = ft_calloc((data.nb_arg), sizeof(long));
 	data.index = ft_calloc(data.nb_arg, sizeof(int));
-	call_parsing(&data, argv, argc);
-	ft_free(&data, argv, argc);
+	call_parsing(&data, argv);
+	ft_free(&data, argv);
 }

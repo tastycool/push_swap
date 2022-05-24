@@ -6,14 +6,14 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:06:23 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/24 15:35:42 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 16:16:09 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <unistd.h>
 
-void	check_minus(t_data *data, char **argv, int argc)
+void	check_minus(t_data *data, char **argv)
 {
 	int	i;
 	int	j;
@@ -27,14 +27,14 @@ void	check_minus(t_data *data, char **argv, int argc)
 		while (argv[i][j] != '\0')
 		{	
 			if (!ft_strchr("0123456789", argv[i][j]))
-				quit_free(data, argc, argv);
+				quit_free(data, argv);
 			j++;
 		}
 		i++;
 	}
 }
 
-void	valid_check(t_data *data, char **argv, int argc)
+void	valid_check(t_data *data, char **argv)
 {
 	int	i;
 	int	j;
@@ -46,22 +46,22 @@ void	valid_check(t_data *data, char **argv, int argc)
 		while (argv[i][j] != '\0')
 		{
 			if (!ft_strchr(VALIDE_SYMBOLE, argv[i][j]))
-				quit_free(data, argc, argv);
+				quit_free(data, argv);
 			j++;
 		}
 		i++;
 	}
 }
 
-void	call_parsing(t_data *data, char **argv, int argc)
+void	call_parsing(t_data *data, char **argv)
 {
-	valid_check(data, argv, argc);
-	check_minus(data, argv, argc);
+	valid_check(data, argv);
+	check_minus(data, argv);
 	full_index(data, argv);
 	full_stack_a(data, argv);
-	check_doublon(data, argv, argc);
-	check_max_min(data, argv, argc);
-	check_if_sorted(data, argv, argc);
+	check_doublon(data, argv);
+	check_max_min(data, argv);
+	check_if_sorted(data, argv);
 	indexisation(data);
 }
 

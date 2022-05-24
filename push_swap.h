@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:56:29 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/24 15:34:44 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 16:15:56 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,20 +48,21 @@ typedef struct s_data
 	int		x;
 	int		max;
 	int		check_mediane;
+	int		verifier;
 }	t_data;
 
-void	quit(char **argv, int argc);
-void	a_sorted(t_data *data, char **argv, int argc);
-void	valid_check(t_data *data, char **argv, int argc);
-void	check_if_sorted(t_data *data, char **argv, int argc);
-void	check_doublon(t_data *data, char **argv, int argc);
+void	quit(t_data *data, char **argv);
+void	a_sorted(t_data *data, char **argv);
+void	valid_check(t_data *data, char **argv);
+void	check_if_sorted(t_data *data, char **argv);
+void	check_doublon(t_data *data, char **argv);
 int		main(int argc, char **argv);
 void	full_stack_a(t_data *data, char **argv);
 char	**split_argv(char **argv, t_data *data);
-void	call_parsing(t_data *data, char **argv, int argc);
-void	check_minus(t_data *data, char **argv, int argc);
-void	check_max_min(t_data *data, char **argv, int argc);
-void	quit_free(t_data *data, int argc, char **argv);
+void	call_parsing(t_data *data, char **argv);
+void	check_minus(t_data *data, char **argv);
+void	check_max_min(t_data *data, char **argv);
+void	quit_free(t_data *data, char **argv);
 void	ft_free_long_tab_p_s(long **tab);
 void	swap_a(t_data *data);
 void	swap_b(t_data *data);
@@ -103,7 +104,7 @@ void	put_bigger_on_top_rotate(t_data *data);
 void	put_bigger_on_top_r_rotate(t_data *data);
 void	check_mediane(t_data *data);
 void	stacka_tob(t_data *data);
-void	ft_free(t_data *data, char **argv, int argc);
+void	ft_free(t_data *data, char **argv);
 void	full_index(t_data *data, char **argv);
 
 #endif
