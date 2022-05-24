@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:06:23 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/24 16:40:31 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 16:44:14 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ void	check_minus(t_data *data, char **argv)
 	{
 		j = 0;
 		if (argv[i][j] == '-')
+		{
 			j++;
-		if (!ft_strchr("0123456789", argv[i][j]))
-			quit_free(data, argv);
+			if (argv[i][j] == '\0')
+				quit_free(data, argv);	
+		}
 		while (argv[i][j] != '\0')
 		{	
 			if (!ft_strchr("0123456789", argv[i][j]))
