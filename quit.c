@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 13:58:10 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/24 16:27:39 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 16:53:00 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	a_sorted(t_data *data, char **argv)
 	}
 	if (data->index)
 		free(data->index);
-	exit(1);
+	exit(0);
 }
 
 void	quit_free(t_data *data, char **argv)
