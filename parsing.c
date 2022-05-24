@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 11:41:44 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/16 10:39:26 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 13:59:54 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	check_doublon(t_data *data)
 			if (avant == apres)
 				quit_free(data);
 			else
-				j++;;	
+				j++;
 		}
 		i++;
 	}

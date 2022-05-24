@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 09:13:43 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/21 07:41:41 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 14:06:08 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,5 @@ int	main(int argc, char **argv)
 	data.tab_stack[B] = ft_calloc((data.nb_arg), sizeof(long));
 	data.index = ft_calloc(data.nb_arg, sizeof(int));
 	call_parsing(&data, argv);
-
-
-	//print_stack(data.tab_stack[B], data.nb_stack_B);
+	ft_free(data);
 }
-
-// 4 - 2 - 5 - 1 - 3
-// 4 - 2 - 3 - 5 - 1
-// 4 - 2 - 5 - 3 - 1
-// 3 - 2 - 5 - 1 - 4

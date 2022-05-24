@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 11:42:09 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/20 13:23:28 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 13:42:28 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,17 @@ void	full_stack_a(t_data *data, char **argv)
 		data->tab_stack[A][i] = ft_atolong(argv[j]);
 		i--;
 		j++;
+	}
+}
+
+void	stackA_toB(t_data *data)
+{
+	int	i;
+
+	i = 0;
+	while (i < data->nb_stack_A)
+	{
+		data->tab_stack[A][i] = data->tab_stack[B][i];
+		i++;
 	}
 }

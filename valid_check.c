@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:06:23 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/20 15:49:50 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 13:37:46 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ void	indexisation(t_data *data)
 		sort_index_stack_A(data);
 		data->incre_int++;
 	}
+	stackA_toB(data);
 	call_algo(data);
 }
 
