@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 09:13:43 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/24 16:21:28 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 16:25:47 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(int argc, char **argv)
 	data.nb_arg = 0;
 	argc -= 1;
 	++argv;
-	if (argc <= 1)
+	if (argc < 1)
 		exit(1);
 	data.verifier = 0;
 	if (ft_strchr(argv[0], ' '))
