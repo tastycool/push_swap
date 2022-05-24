@@ -11,7 +11,7 @@
 			"name": "Debug",
 			"program": "${workspaceFolder}/push_swap",
 			//"args": ["3 4 5 6 8 7"],
-			"args": ["-1 -2 3 0 4"],
+			"args": ["5 -2 3 0 5"],
 			"cwd": "${workspaceFolder}"
 		}
 	]

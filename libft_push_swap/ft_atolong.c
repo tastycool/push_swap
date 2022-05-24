@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:15:00 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/09 15:53:29 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 14:59:10 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ long	ft_atolong(const char *str)
 	negatif = 1;
 	i = 0;
 	retour = 0;
-
 	if (str[0] == '-')
 	{
 		negatif = -1;

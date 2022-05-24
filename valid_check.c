@@ -6,14 +6,14 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:06:23 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/24 13:37:46 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 15:35:42 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <unistd.h>
 
-void	check_minus(t_data *data, char **argv)
+void	check_minus(t_data *data, char **argv, int argc)
 {
 	int	i;
 	int	j;
@@ -25,21 +25,20 @@ void	check_minus(t_data *data, char **argv)
 		if (argv[i][j] == '-')
 			j++;
 		while (argv[i][j] != '\0')
-		{
-			
+		{	
 			if (!ft_strchr("0123456789", argv[i][j]))
-				quit_free(data);
+				quit_free(data, argc, argv);
 			j++;
 		}
 		i++;
 	}
 }
 
-void	valid_check(t_data *data, char **argv)
+void	valid_check(t_data *data, char **argv, int argc)
 {
 	int	i;
 	int	j;
-	
+
 	i = 0;
 	while (i < data->nb_arg)
 	{
@@ -47,21 +46,22 @@ void	valid_check(t_data *data, char **argv)
 		while (argv[i][j] != '\0')
 		{
 			if (!ft_strchr(VALIDE_SYMBOLE, argv[i][j]))
-				quit_free(data);
+				quit_free(data, argc, argv);
 			j++;
 		}
 		i++;
 	}
 }
-	
-void	call_parsing(t_data *data, char **argv)
+
+void	call_parsing(t_data *data, char **argv, int argc)
 {
-	valid_check(data, argv);
-	check_minus(data, argv);
+	valid_check(data, argv, argc);
+	check_minus(data, argv, argc);
+	full_index(data, argv);
 	full_stack_a(data, argv);
-	check_doublon(data);
-	check_max_min(data);
-	check_if_sorted(data);
+	check_doublon(data, argv, argc);
+	check_max_min(data, argv, argc);
+	check_if_sorted(data, argv, argc);
 	indexisation(data);
 }
 
@@ -81,10 +81,10 @@ void	indexisation(t_data *data)
 	data->incre_int = 0;
 	while (data->incre_int < data->nb_arg)
 	{
-		sort_index_stack_A(data);
+		sort_index_stack_a(data);
 		data->incre_int++;
 	}
-	stackA_toB(data);
+	stacka_tob(data);
 	call_algo(data);
 }
 

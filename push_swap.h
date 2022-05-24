@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:56:29 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/24 14:07:27 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 15:34:44 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ typedef struct s_data
 	char	**arg;
 	int		nb_arg;
 	bool	sorted;
-	int		nb_stack_A;
-	int		nb_stack_B;
+	int		nb_stack_a;
+	int		nb_stack_b;
 	int		*index;
 	int		index_min;
 	int		incre_int;
@@ -50,19 +50,19 @@ typedef struct s_data
 	int		check_mediane;
 }	t_data;
 
-void	quit();
-void	a_sorted(t_data *data);
-void	valid_check(t_data *data, char **argv);
-void	check_if_sorted(t_data *data);
-void	check_doublon(t_data *data);
+void	quit(char **argv, int argc);
+void	a_sorted(t_data *data, char **argv, int argc);
+void	valid_check(t_data *data, char **argv, int argc);
+void	check_if_sorted(t_data *data, char **argv, int argc);
+void	check_doublon(t_data *data, char **argv, int argc);
 int		main(int argc, char **argv);
 void	full_stack_a(t_data *data, char **argv);
 char	**split_argv(char **argv, t_data *data);
-void	call_parsing(t_data *data, char **argv);
-void	check_minus(t_data *data, char **argv);
-void	check_max_min(t_data *data);
-void	quit_free(t_data *data);
-void	ft_free_long_tab_P_S(long **tab);
+void	call_parsing(t_data *data, char **argv, int argc);
+void	check_minus(t_data *data, char **argv, int argc);
+void	check_max_min(t_data *data, char **argv, int argc);
+void	quit_free(t_data *data, int argc, char **argv);
+void	ft_free_long_tab_p_s(long **tab);
 void	swap_a(t_data *data);
 void	swap_b(t_data *data);
 void	swap_a_swap_b(t_data *data);
@@ -75,16 +75,16 @@ void	reverse_rotate_a(t_data *data);
 void	reverse_rotate_b(t_data *data);
 void	reverse_rotate_a_reverse_rotate_b(t_data *data);
 void	test(t_data *data);
-void	swaping_A(t_data *data);
-void	swaping_B(t_data *data);
-void	rotating_A(t_data *data);
-void	rotating_B(t_data *data);
+void	swaping_a(t_data *data);
+void	swaping_b(t_data *data);
+void	rotating_a(t_data *data);
+void	rotating_b(t_data *data);
 void	rrra(t_data *data);
 void	rrrb(t_data *data);
 void	find_min(t_data *data);
 void	call_algo(t_data *data);
 void	find_next(t_data *data);
-void	sort_index_stack_A(t_data *data);
+void	sort_index_stack_a(t_data *data);
 void	indexisation(t_data *data);
 void	algo_3(t_data *data);
 void	algo_3_suite(t_data *data);
@@ -92,7 +92,7 @@ void	algo_5(t_data *data);
 void	search_1_2(t_data *data);
 void	algo_5_suite(t_data *data);
 void	suite_2_algo_5(t_data *data);
-void 	print_stack(long* stack, int size);
+void	print_stack(long *stack, int size);
 void	gros_algo(t_data *data);
 void	algo_6_499(t_data *data);
 void	algo_6_499_suite(t_data *data);
@@ -102,7 +102,8 @@ void	find_bigger(t_data *data);
 void	put_bigger_on_top_rotate(t_data *data);
 void	put_bigger_on_top_r_rotate(t_data *data);
 void	check_mediane(t_data *data);
-void	stackA_toB(t_data *data);
-void	ft_free(t_data *data);
+void	stacka_tob(t_data *data);
+void	ft_free(t_data *data, char **argv, int argc);
+void	full_index(t_data *data, char **argv);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 10:33:51 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/12 19:52:49 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 15:24:09 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_free_long_tab_P_S(long **tab)
+void	ft_free_long_tab_p_s(long **tab)
 {
 	free(tab[A]);
 	free(tab[B]);
