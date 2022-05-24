@@ -6,7 +6,7 @@
 /*   By: tberube- <tberube-@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 10:56:29 by tberube-          #+#    #+#             */
-/*   Updated: 2022/05/24 16:15:56 by tberube-         ###   ########.fr       */
+/*   Updated: 2022/05/24 16:34:26 by tberube-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct s_data
 	bool	sorted;
 	int		nb_stack_a;
 	int		nb_stack_b;
-	int		*index;
+	long	*index;
 	int		index_min;
 	int		incre_int;
 	int		next_min;
